@@ -40,4 +40,4 @@ def img_logo():
 
 #Das ist für dich zu Hause, auskommentieren und los geht es
 #if __name__ == "__main__":
-#   app.run(host="0.0.0.0", port=1337, debug=True)
+#   app.run()
