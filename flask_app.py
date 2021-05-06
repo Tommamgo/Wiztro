@@ -40,4 +40,4 @@ def img_logo():
 
 #Das ist für dich zu Hause, auskommentieren und los geht es
 #if __name__ == "__main__":
-#   app.run()
+#	app.run()
