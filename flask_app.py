@@ -38,3 +38,7 @@ def index():
 @app.route("/static/img/Logo.png", methods=['GET'])
 def img_logo():
     return send_file("static/img/Logo.png", mimetype='image/gif')
+
+#Das ist für dich zu Hause, auskommentieren und los geht es
+#if __name__ == "__main__":
+#	app.run()
