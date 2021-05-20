@@ -1,1 +1,6 @@
 venv/
+ENV_DIR/
+keys.asc
+geckodriver
+geckodriver.log
+.idea
