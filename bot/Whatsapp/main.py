@@ -17,6 +17,9 @@ def start_up():
 
 #function will be send a single Message to somebody
 def messager(name, text):
+    #search Name
+    message_box = firefox_browser.find_element_by_xpath('/html/body/div/div[1]/div[1]/div[3]/div/div[1]/div/label/div/div[2]')
+    message_box.send_keys(name)
     #choose Name
     usr = firefox_browser.find_element_by_xpath('//span[@title="{}"]'.format(name))
     usr.click()
@@ -33,7 +36,7 @@ if __name__ == "__main__":
     start_up()
 
     #messager('Business OS', 'Ich bins nochmal, wie zur Hölle Lade ich in Whatsapp Web ein Bild in meinen Status?')
-    #messager('Vanessa ♥️ Lenz', 'Hallo, ich bin der Server und wollte mich mal melden. --Whatsapp Server geht')
-    for i in range(100):
-        messager('Lukas B', 'hoffentlich nerve ich dich!! ')
+    messager('Vanessa ♥️ Lenz', 'Hallo, ich bin der Server und wollte mich mal melden. --Whatsapp Server geht')
+    #for i in range(100):
+    #    messager('Lukas B', 'hoffentlich nerve ich dich!! ')
 
