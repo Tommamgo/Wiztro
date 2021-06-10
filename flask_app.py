@@ -25,7 +25,9 @@ def webhook():
     else:
         return 'Wrong event type', 400
 
-
+@app.route('/landing')
+def landing():
+    return render_template('LANDING_PAGE')
 
 
 
@@ -39,5 +41,5 @@ def img_logo():
     return send_file("static/img/Logo.png", mimetype='image/gif')
 
 #Das ist für dich zu Hause, auskommentieren und los geht es
-#if __name__ == "__main__":
-#	app.run()
+if __name__ == "__main__":
+	app.run()
