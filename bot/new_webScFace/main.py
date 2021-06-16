@@ -1,6 +1,9 @@
+
+
 import time
 
-import os
+
+import pyautogui as pyautogui
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -35,48 +38,37 @@ def start_up():
     message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div/div/div/div[2]/div/div[1]/form/div[2]')
     message_box.click()
 
-    #Profil
-    message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/a')
+
+def uploadpic(path_img, caption):
+
+    message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[2]/div[4]/div[1]/div[3]/span/div')
     message_box.click()
-    time.sleep(1)
-
-    message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[3]/div/div/div/div[2]/div/div/div/div[1]/div/a')
+    time.sleep(2)
+    message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[2]/div[4]/div[2]/div/div/div[1]/div[1]/div/div/div/div/div/div/div/div[2]/div[1]/div')
     message_box.click()
-    time.sleep(1)
-
-    ele = wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div/div[1]/div/div[4]/div/div/div[1]/div/div[3]/div[2]/div[2]/div/div/div/div/div[1]')))
-    ele.send_keys("./test.jpg")
-
-    #
-
-
-
-
-
-
-
-
-#function will be send a single Message to somebody
-def messager(name, text):
-    #get the Pive Button re
-
-
-
-
-    #message_box.send_keys(name)
-    #choose Name
-    usr = firefox_browser.find_element_by_xpath('//span[@title="{}"]'.format(name))
-    usr.click()
-    #insert text
-    message_box = firefox_browser.find_element_by_xpath('/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[2]')
-    message_box.send_keys(text)
-    #send
-    message_box = firefox_browser.find_element_by_xpath('/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[3]/button')
+    time.sleep(2)
+    message_box = firefox_browser.find_element_by_xpath('/html/body/div[10]/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[3]/div[1]/div[2]/div/div[1]/div/span/div')
     message_box.click()
-    #get pic
-    time.sleep(1)
-    message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[4]/div/div/div[1]/div/div[3]/div[2]/div[2]/div/div/div/div/div[1]')
+    time.sleep(2)
+    pyautogui.write(path_img)
+    time.sleep(3)
+    pyautogui.press('enter')
+    time.sleep(3)
+    cap = firefox_browser.find_element_by_xpath('/html/body/div[10]/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div')
+    cap.send_keys(caption)
+    time.sleep(2)
+    message_box = firefox_browser.find_element_by_xpath('/html/body/div[10]/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[3]/div[2]/div')
     message_box.click()
+
+    #cap =  WebDriverWait(webdriver, 20).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[10]/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div')))
+    #cap.send_key(caption)
+    #message_box = WebDriverWait(webdriver, 20).until(EC.presence_of_element_located(
+    #    (By.XPATH,
+    #     '/html/body/div[10]/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[3]/div[3]')))
+    #message_box.click()
+
+
+
 
 
 
@@ -89,5 +81,6 @@ def messager(name, text):
 
 if __name__ == '__main__':
     start_up()
+    uploadpic('test1.jpg', 'Hallo')
 
 
