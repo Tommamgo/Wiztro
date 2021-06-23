@@ -19,8 +19,9 @@ def get_the_time():
 @app.route('/update_server', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('wiztro.pythonanywhere.com')
-        origin = repo.remotes.originorigin.pull()
+        repo = git.Repo('/home/Wiztro/Wiztro')
+        origin = repo.remotes.origin
+        origin.pull()
 
         return 'Updated PythonAnywhere successfully', 200
     else:
