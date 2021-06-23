@@ -1,0 +1,282 @@
+body {
+  background-color: #FFFFFF;
+  background-size: cover;
+  width: auto;
+  max-width: 2000px;
+  margin: auto;
+  margin-top: auto;
+  overflow: scroll;
+  font-family: "SFPro_bold";
+  font-size: 18px;
+}
+
+h1 {
+  font-family: "SFPro_bold";
+  font-size: 28px;
+}
+
+h2 {
+  font-family: "SFPro_bold";
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "SFPro_bold";
+  font-size: 28px;
+}
+
+h4 {
+  font-family: "SFPro_light";
+  font-size: 18px;
+}
+
+h5 {
+  font-family: "SFPro_bold";
+  font-size: 14px;
+  opacity: 50%;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: SFPro_bold;
+  src: url(fonts/SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+  font-family: SFPro_light;
+  src: url(fonts/SF-Pro-Display-Light.otf);
+}
+
+.header {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.header2 {
+  margin-top: 160px;
+  margin-bottom: 40px;
+  background-color: #FFFFFF;
+  opacity: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.progress {
+  margin-top: 100px;
+  padding-top: 10px;
+  height: 120px;
+  background-color: #FFFFFF;
+  opacity: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.subheader {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.description {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  opacity: 80%;
+  color: #000000;
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(3, 14vw);
+  grid-gap: 16px;
+  margin-bottom: 160px;
+}
+
+.gallery__img {
+  color: #F5F6FA;
+  border-radius: 12px;
+  border: solid;
+  border-width: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__img_selected {
+  color: #39A08D;
+  border-radius: 12px;
+  border: solid;
+  border-width: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ________Typo Logo________ */
+.button_holder {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  min-height: 100px;
+  max-height: 120px;
+  padding-left: 48%;
+  bottom: 0px;
+  left: 0px;
+  max-width: auto;
+  width: 100%;
+  position: fixed;
+}
+
+/* ________Typo Logo________ */
+.progress_bar {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  height: auto;
+  max-height: 200px;
+  max-width: auto;
+  width: 100%;
+}
+
+.next_button {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 32px;
+  margin-top: 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.next_button:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+/* ________Box Navigationsbar________ */
+.navigationbar {
+  overflow: hidden;
+  background-color: #F5F6FA;
+  min-height: 100px;
+  max-height: 120px;
+  top: 0px;
+  left: 0px;
+  max-width: auto;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+}
+
+/* ________Typo Logo________ */
+.wiztro_logo {
+  /* display: block; */
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 18px;
+  height: 24px;
+}
+
+/* ________Typo Logo________ */
+.profile_logo {
+  /* display: block; */
+  position: fixed;
+  height: 66px;
+}
+
+/* ________Linke Hälfte der Navigationsbar________ */
+div.leftnavbar {
+  vertical-align: middle;
+  padding: 20px;
+  float: left;
+}
+
+/* ________Rechte Hälfte der Navigationsbar________ */
+div.rightnavbar {
+  position: fixed;
+  padding: 40px;
+  margin-left: 37%;
+  float: right;
+}
+
+/* ________Profilbild in der Navigationsbar________ */
+div.profilenavbar {
+  position: fixed;
+  margin-top: 18px;
+  margin-left: 93%;
+  float: right;
+}
+
+/* ________Weiter Button unten Rechts________ */
+/* div.next_button {
+  margin-left: 93%;
+  float: right;
+} */
+li {
+  right: 0px;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+/* ________Navigationsbar Buttons________ */
+a.inactive {
+  color: #747476;
+  text-transform: uppercase;
+  font-family: "SFPro_bold";
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 16px;
+  margin-left: 10px;
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+}
+
+a.inactive:hover {
+  color: #39A08D;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+/* ________Navigationsbar Buttons________ */
+a.active {
+  color: #39A08D;
+  text-transform: uppercase;
+  font-family: "SFPro_bold";
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 16px;
+  margin-left: 10px;
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+}
+
+#container_1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#leftThing {
+  width: 55%;
+  background-color: #F5F6FA;
+}
+
+#rightThing {
+  width: 45%;
+  background-color: #FFFFFF;
+}

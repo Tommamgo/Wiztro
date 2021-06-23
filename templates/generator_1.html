@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" <link rel="stylesheet" href="/aboutStyle.css" /> -->
+
+  <meta charset="utf-8">
+  <title>Wiztro</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.gallery__img').on('click', function(e) {
+        e.preventDefault();
+        console.log('your message');
+        $(this).toggleClass('gallery__img_selected');
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+
+  <div class="navigationbar">
+
+    <div class="leftnavbar">
+      <img class="wiztro_logo" src="img/Wiztro_Logo.png" /></img>
+    </div>
+
+
+    <div class="rightnavbar">
+      <a class="inactive">Tipps</a>
+      <a class="inactive">Tutorials</a>
+      <a class="active">Generator</a>
+      <!-- <a class="active" href="/about.html">Generator</a> -->
+    </div>
+
+    <div class="profilenavbar">
+      <img class="profile_logo" src="../static/img/Profile_Logo.png" /></img>
+    </div>
+  </div>
+
+  <div id="container_1">
+
+    <div id="leftThing">
+      <div class="progress">
+
+        <h1>Material auswählen</h1>
+        <h5>Auswählen</h5>
+      </div>
+      <div class="description">
+        <h4>Du willst mehr als nur ein Bild hochladen?<br>
+          Wähle hier aus, welche und wieviele Bilder du hochladen möchtest.</h4>
+      </div>
+      <div class="container">
+
+        <div class="gallery">
+          <figure class=”gallery__item gallery__item--1">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+          </figure>
+          <figure class="gallery__item gallery__item--2">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
+          </figure>
+          <figure class="gallery__item gallery__item--3">
+            <img src="img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
+          </figure>
+          <figure class="gallery__item gallery__item--4">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
+          </figure>
+          <figure class=”gallery__item gallery__item--1">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+          </figure>
+          <figure class="gallery__item gallery__item--2">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
+          </figure>
+          <figure class="gallery__item gallery__item--3">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
+          </figure>
+          <figure class="gallery__item gallery__item--4">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
+          </figure>
+          <figure class=”gallery__item gallery__item--1">
+            <img src="../img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+          </figure>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="rightThing">
+      <div class="header2">
+        <h1>Auswahl</h1>
+      </div>
+
+      <div class="container">
+
+        <div class="gallery">
+          <figure class=”gallery__item gallery__item--1">
+            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+          </figure>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
