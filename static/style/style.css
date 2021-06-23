@@ -39,12 +39,12 @@ h5 {
 
 @font-face {
   font-family: SFPro_bold;
-  src: url(fonts/SF-Pro-Display-Bold.otf);
+  src: url(/fonts/SF-Pro-Display-Bold.otf);
 }
 
 @font-face {
   font-family: SFPro_light;
-  src: url(fonts/SF-Pro-Display-Light.otf);
+  src: url(/fonts/SF-Pro-Display-Light.otf);
 }
 
 .header {
@@ -280,3 +280,4 @@ a.active {
   width: 45%;
   background-color: #FFFFFF;
 }
+
