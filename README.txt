@@ -9,5 +9,7 @@ Schritt 2: IDE öffnen und `if __name__ == "__main__":` auskommentieren
 
 Schritt 3: fehlende Libs installieren
 
+Die HTML File next.html kann jetzt verwendet werden. 
+Das request wurde inplementiert
 
 

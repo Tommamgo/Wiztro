@@ -31,6 +31,12 @@ def webhook():
 def landing():
     return render_template('LANDING_PAGE.html')
 
+
+@app.route('/next')
+def next():
+    return render_template('next.html')
+
+
 @app.route('/start')
 def start():
     return render_template('start.html')
