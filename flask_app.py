@@ -36,6 +36,25 @@ def landing():
 def next():
     return render_template('next.html')
 
+@app.route('/next_1')
+def next1():
+    return render_template('next_1.html')
+
+@app.route('/next_2')
+def next2():
+    return render_template('next_2.html')
+
+@app.route('/next_3')
+def next3():
+    return render_template('next_3.html')
+
+@app.route('/next_4')
+def next4():
+    return render_template('next_4.html')
+
+
+
+
 
 @app.route('/start')
 def start():
@@ -66,6 +85,121 @@ def img3():
 def img4():
     if request.method == 'GET':
         return send_file("static/img/stempelkarte_oko.png", mimetype='image/gif')
+
+
+@app.route("/static/img/bild_1.png", methods=['GET'])
+def img5():
+    if request.method == 'GET':
+        return send_file("static/img/bild_1.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_2.png", methods=['GET'])
+def img6():
+    if request.method == 'GET':
+        return send_file("static/img/bild_2.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_3.png", methods=['GET'])
+def img7():
+    if request.method == 'GET':
+        return send_file("static/img/bild_3.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_4.png", methods=['GET'])
+def img8():
+    if request.method == 'GET':
+        return send_file("static/img/bild_4.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_5.png", methods=['GET'])
+def img9():
+    if request.method == 'GET':
+        return send_file("static/img/bild_5.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_6.png", methods=['GET'])
+def img10():
+    if request.method == 'GET':
+        return send_file("static/img/bild_6.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_7.png", methods=['GET'])
+def img11():
+    if request.method == 'GET':
+        return send_file("static/img/bild_7.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_8.png", methods=['GET'])
+def img12():
+    if request.method == 'GET':
+        return send_file("static/img/bild_8.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_9.png", methods=['GET'])
+def img13():
+    if request.method == 'GET':
+        return send_file("static/img/bild_9.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_10.png", methods=['GET'])
+def img14():
+    if request.method == 'GET':
+        return send_file("static/img/bild_10.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_11.png", methods=['GET'])
+def img15():
+    if request.method == 'GET':
+        return send_file("static/img/bild_11.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_12.png", methods=['GET'])
+def img16():
+    if request.method == 'GET':
+        return send_file("static/img/bild_12.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_13.png", methods=['GET'])
+def img17():
+    if request.method == 'GET':
+        return send_file("static/img/bild_13.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_14.png", methods=['GET'])
+def img18():
+    if request.method == 'GET':
+        return send_file("static/img/bild_14.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_15.png", methods=['GET'])
+def img19():
+    if request.method == 'GET':
+        return send_file("static/img/bild_15.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_16.png", methods=['GET'])
+def img20():
+    if request.method == 'GET':
+        return send_file("static/img/bild_16.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_17.png", methods=['GET'])
+def img21():
+    if request.method == 'GET':
+        return send_file("static/img/bild_17.png", mimetype='image/gif')
+
+@app.route("/static/img/bild_18.png", methods=['GET'])
+def img22():
+    if request.method == 'GET':
+        return send_file("static/img/bild_18.png", mimetype='image/gif')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
