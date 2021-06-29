@@ -1,15 +1,30 @@
-Wenn ihr Code schreibt könnt ihr das auch erst mal auf eurem Pc machen. 
-In der flask_app.py hat es ganz unten einen funktion Namens `if __name__ == "__main__":`
-diese einfach auskommentieren und los legen. 
+Bitte wenn diese Pfade verwendet werden aus der README.txt löschen. Danke
 
+freie HTML File:
+next.html 
+next_1.html
+next_2.html
+next_3.html
+next_4.html
 
-Schritt 1: git clone https://github.com/Tommamgo/Wiztro.git
-
-Schritt 2: IDE öffnen und `if __name__ == "__main__":` auskommentieren
-
-Schritt 3: fehlende Libs installieren
-
-Die HTML File next.html kann jetzt verwendet werden. 
-Das request wurde inplementiert
+freie png File:
+bild_1.png
+bild_2.png
+bild_3.png
+bild_4.png
+bild_5.png
+bild_6.png
+bild_7.png
+bild_8.png
+bild_9.png
+bild_10.png
+bild_11.png
+bild_12.png
+bild_13.png
+bild_14.png
+bild_15.png
+bild_16.png
+bild_17.png
+bild_18.png
 
 
