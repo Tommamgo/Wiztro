@@ -94,7 +94,7 @@ def img2():
 @app.route("/static/img/del.png", methods= ['GET'])
 def del():
     if request.method == 'GET':
-    return send_file("static/img/del.png", minetype = 'image/gif')
+        return send_file("static/img/del.png", minetype = 'image/gif')
 
 @app.route("/static/img/Profile_Logo.png", methods=['GET'])
 def img3():
