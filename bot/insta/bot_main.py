@@ -40,31 +40,33 @@ def inst_pic_post(user, pwd):
 
 def isnew():
     try:
-        urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/static/img/del.png", "hallo.png")
-        #um wandel von dem Bild
-        time.sleep(2)
-        im = Image.open('./hallo.png')
-        rgb_im = im.convert('RGB')
-        rgb_im.save('hallo.jpeg')
-        time.sleep(1)
-        #inst_pic_post('wiztro', 'RD5SyLm7kQePT4R')
-        #löschen den files
-        os.remove('./hallo.png')
-        os.remove('./hallo.jpeg')
-        print("Sachen")
-        serv_del()
-        print("nice")
-    #hier kommt die post funktion
+        temp = serv_def()
+        if (serv_def() != 0): 
+            print(temp)
+            urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + temp, "hallo.png")
+            #um wandel von dem Bild
+            time.sleep(2)
+            im = Image.open('./hallo.png')
+            rgb_im = im.convert('RGB')
+            rgb_im.save('hallo.jpeg')
+            time.sleep(1)
+            #inst_pic_post('wiztro', 'RD5SyLm7kQePT4R')
+            #löschen den files
+            os.remove('./hallo.png')
+            os.remove('./hallo.jpeg')
+            print("Sachen")
+            print("nice")
+            #hier kommt die post funktion
     except:
         print('hallo')
-        time.sleep(60)
+        time.sleep(1)
 
 
 
 def serv_del():
     
     url = 'https://wiztro.pythonanywhere.com/get?name=1'
-    urlparse.urlparse(url)
+    return urlparse.urlparse(url)
 
 if __name__ == "__main__":
     #inst_pic_post("wiztro","RD5SyLm7kQePT4R" )
