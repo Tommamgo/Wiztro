@@ -72,7 +72,7 @@ def get():
     if request.method == 'POST':
         name = str(request.args.get('name'))
     else:
-        name = str(request.args.get('name'))
+        name = request.args.get('name')
     if(name == '1'):
         try:
             os.remove('./static/img/del.png')

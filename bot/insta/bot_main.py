@@ -1,4 +1,4 @@
-from instabot import Bot
+#from instabot import Bot
 import urllib.parse as urlparse
 from urllib.parse import urlencode
 from PIL import Image
@@ -40,7 +40,7 @@ def inst_pic_post(user, pwd):
 
 def isnew():
     try:
-        urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/static/img/bild_1.png", "hallo.png")
+        urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/static/img/del.png", "hallo.png")
         #um wandel von dem Bild
         time.sleep(2)
         im = Image.open('./hallo.png')
@@ -51,6 +51,7 @@ def isnew():
         #löschen den files
         os.remove('./hallo.png')
         os.remove('./hallo.jpeg')
+        serv_del()
 
     #hier kommt die post funktion
     except:
@@ -61,7 +62,8 @@ def isnew():
 
 def serv_del():
     params = {'name': '1'}
-    request.get('https://wiztro.pythonanywhere.com/del', params=params)
+    request.get('https://wiztro.pythonanywhere.com/get', params=params)
+
 if __name__ == "__main__":
     #inst_pic_post("wiztro","RD5SyLm7kQePT4R" )
     while(True):
