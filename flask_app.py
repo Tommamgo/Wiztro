@@ -73,7 +73,14 @@ def get():
         name = str(request.args.get('name'))
     else:
         name = str(request.args.get('name'))
-    return 'danke'
+    if(name == '1'):
+        try:
+            os.remove('./static/img/del.png')
+            name = "fine"
+        except:
+            name = "nop"
+
+    return name
 
 
 @app.route("/static/img/Logo.png", methods=['GET'])
@@ -84,6 +91,10 @@ def img_logo():
 def img2():
     if request.method == 'GET':
         return send_file("static/img/Wiztro_Logo.png", mimetype='image/gif')
+@app.route("/static/img/del.png", methods= ['GET'])
+def del():
+    if request.method == 'GET':
+    return send_file("static/img/del.png", minetype = 'image/gif')
 
 @app.route("/static/img/Profile_Logo.png", methods=['GET'])
 def img3():
