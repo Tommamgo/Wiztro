@@ -91,10 +91,11 @@ def img_logo():
 def img2():
     if request.method == 'GET':
         return send_file("static/img/Wiztro_Logo.png", mimetype='image/gif')
+
 @app.route("/static/img/del.png", methods= ['GET'])
-def del():
+def dele():
     if request.method == 'GET':
-        return send_file("static/img/del.png", minetype = 'image/gif')
+        return send_file("static/img/del.png", mimetype='image/gif')
 
 @app.route("/static/img/Profile_Logo.png", methods=['GET'])
 def img3():
