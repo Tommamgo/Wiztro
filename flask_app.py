@@ -76,12 +76,11 @@ def get():
         name =request.args.get('name')
     else:
         name = request.args.get('name')
-    if(name == '1'):
-        try: 
-            name = get_pic
-            get_pic = '0'
-        except:
-            name = "nop"
+    if(name == '1'): 
+        name = get_pic
+        get_pic = '0'
+    else:
+        name = "nop"
 
     return name
 
