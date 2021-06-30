@@ -88,6 +88,7 @@ def get():
 @app.route('/botfile', methods=['POST', 'GET'])
 def botfile():
     get_pic = request.args.get('name')
+    return get_pic
 
 
 @app.route("/static/img/Logo.png", methods=['GET'])

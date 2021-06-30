@@ -52,8 +52,8 @@ def isnew():
             time.sleep(1)
             #inst_pic_post('wiztro', 'RD5SyLm7kQePT4R')
             #löschen den files
-            os.remove('./hallo.png')
-            os.remove('./hallo.jpeg')
+            #os.remove('./hallo.png')
+            #os.remove('./hallo.jpeg')
             print("Sachen")
             print("nice")
             #hier kommt die post funktion
@@ -66,7 +66,8 @@ def isnew():
 def serv_del():
     
     url = 'https://wiztro.pythonanywhere.com/get?name=1'
-    return urlparse.urlparse(url)
+    
+    #return urlparse.urlparse(url)
 
 if __name__ == "__main__":
     #inst_pic_post("wiztro","RD5SyLm7kQePT4R" )
