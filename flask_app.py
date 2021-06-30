@@ -70,7 +70,7 @@ def index():
 def get():
     name = ''
     if request.method == 'POST':
-        name = str(request.args.get('name'))
+        name =request.args.get('name')
     else:
         name = request.args.get('name')
     if(name == '1'):
