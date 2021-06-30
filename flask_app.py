@@ -66,6 +66,15 @@ def generator_1():
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/get', methods= ['POST', 'GET'])
+def get():
+    name = ''
+    if request.method == 'POST':
+        name = str(request.args.get('name'))
+    else:
+        name = str(request.args.get('name'))
+    return 'danke'
+
 
 @app.route("/static/img/Logo.png", methods=['GET'])
 def img_logo():
