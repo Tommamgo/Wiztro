@@ -11,6 +11,8 @@ from flask import Response
 app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
 #app.config.from_object(__name__)
 
+global get_pic
+
 def get_the_time():
     dt_gmt = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
@@ -66,6 +68,7 @@ def generator_1():
 @app.route('/')
 def index():
     return render_template('index.html')
+
 @app.route('/get', methods= ['POST', 'GET'])
 def get():
     name = ''
@@ -75,8 +78,9 @@ def get():
         name = request.args.get('name')
     if(name == '1'):
         try:
-            os.remove('./static/img/del.png')
-            name = "fine"
+            os.remove('./static/img/del.png') 
+            name = get_pic
+            get_pic = '0'
         except:
             name = "nop"
 
