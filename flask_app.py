@@ -77,14 +77,17 @@ def get():
     else:
         name = request.args.get('name')
     if(name == '1'):
-        try:
-            os.remove('./static/img/del.png') 
+        try: 
             name = get_pic
             get_pic = '0'
         except:
             name = "nop"
 
     return name
+
+@app.route('/botfile', methods=['POST', 'GET'])
+def botfile():
+    get_pic = request.args.get('name')
 
 
 @app.route("/static/img/Logo.png", methods=['GET'])
