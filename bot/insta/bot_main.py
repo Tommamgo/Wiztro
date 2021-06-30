@@ -51,8 +51,9 @@ def isnew():
         #löschen den files
         os.remove('./hallo.png')
         os.remove('./hallo.jpeg')
+        print("Sachen")
         serv_del()
-
+        print("nice")
     #hier kommt die post funktion
     except:
         print('hallo')
@@ -61,8 +62,9 @@ def isnew():
 
 
 def serv_del():
-    params = {'name': '1'}
-    request.get('https://wiztro.pythonanywhere.com/get', params=params)
+    
+    url = 'https://wiztro.pythonanywhere.com/get?name=1'
+    urlparse.urlparse(url)
 
 if __name__ == "__main__":
     #inst_pic_post("wiztro","RD5SyLm7kQePT4R" )
