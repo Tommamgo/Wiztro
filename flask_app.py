@@ -76,8 +76,8 @@ def get():
         name =request.args.get('name')
     else:
         name = request.args.get('name')
-    if(name == '1'): 
-        name = get_pic
+    if(name == 1): 
+        name = str(get_pic)
         get_pic = '0'
     else:
         name = "nop"
