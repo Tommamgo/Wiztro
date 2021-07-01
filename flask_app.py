@@ -11,7 +11,7 @@ from flask import Response
 app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
 #app.config.from_object(__name__)
 
-global get_pic
+get_pic = "0"
 
 def get_the_time():
     dt_gmt = strftime("%Y-%m-%d %H:%M:%S", gmtime())
