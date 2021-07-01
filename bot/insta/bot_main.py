@@ -1,4 +1,5 @@
 #from instabot import Bot
+import requests
 import urllib.parse as urlparse
 from urllib.parse import urlencode
 from PIL import Image
@@ -39,8 +40,9 @@ def inst_pic_post(user, pwd):
     bot.upload_photo("img/hallo.jpeg", caption="Business-OS")
 
 def isnew():
+    temp = serv_del()
+    print(temp)
     try:
-        temp = serv_def()
         if (serv_def() != 0): 
             print(temp)
             urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + temp, "hallo.png")
@@ -64,10 +66,10 @@ def isnew():
 
 
 def serv_del():
-    
     url = 'https://wiztro.pythonanywhere.com/get?name=1'
-    
-    return urlparse.urlparse(url)
+    return requests.get(url).text
+    #return urlparse.urlparse(url)
+
 
 if __name__ == "__main__":
     #inst_pic_post("wiztro","RD5SyLm7kQePT4R" )
