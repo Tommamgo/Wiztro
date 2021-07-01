@@ -87,6 +87,7 @@ def get():
 
 @app.route('/botfile', methods=['POST', 'GET'])
 def botfile():
+    global get_pic
     get_pic = request.args.get('name')
     return get_pic
 
