@@ -43,10 +43,11 @@ def isnew():
     temp = serv_del()
     print(temp)
     try:
-        if (serv_def() != 0): 
+        if (temp != 0): 
             print(temp)
-            urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + temp, "hallo.png")
+            urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + str(temp), "hallo.png")
             #um wandel von dem Bild
+            print("hall")
             time.sleep(2)
             im = Image.open('./hallo.png')
             rgb_im = im.convert('RGB')
