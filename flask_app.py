@@ -71,6 +71,7 @@ def index():
 
 @app.route('/get', methods= ['POST', 'GET'])
 def get():
+    global get_pic
     name = ''
     if request.method == 'POST':
         name =request.args.get('name')
