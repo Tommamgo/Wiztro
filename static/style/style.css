@@ -47,6 +47,10 @@ h5 {
   src: url(/fonts/SF-Pro-Display-Light.otf);
 }
 
+.upload_button {
+  margin-left: 42%;
+}
+
 .header {
   margin-top: 100px;
   margin-bottom: 80px;
@@ -54,12 +58,20 @@ h5 {
   text-align: center;
 }
 
+.header_start {
+  margin-top: 150px;
+  margin-bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+
 .header2 {
-  margin-top: 160px;
+  position: fixed;
+  margin-top: 140px;
   margin-bottom: 40px;
   background-color: #FFFFFF;
   opacity: 50%;
-  width: 100%;
+  width: 46%;
   text-align: center;
 }
 
@@ -80,6 +92,7 @@ h5 {
 }
 
 .description {
+  padding: -10px;
   margin-top: 80px;
   margin-bottom: 80px;
   opacity: 80%;
@@ -99,6 +112,19 @@ h5 {
   grid-template-rows: repeat(3, 14vw);
   grid-gap: 16px;
   margin-bottom: 160px;
+}
+
+.gallery_2 {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(1, 3fr);
+  grid-gap: 16px;
+  position: fixed;
+  bottom: 25%;
+  right: 8.5%;
+  height: calc(50vh - 10px);
+  width: calc(50vh - 10px);
+  margin: auto;
 }
 
 .gallery__img {
@@ -136,20 +162,36 @@ h5 {
 }
 
 /* ________Typo Logo________ */
+.button_holder_1 {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  min-height: 100px;
+  max-height: 120px;
+  padding-left: 16%;
+  bottom: 0px;
+  left: 0px;
+  max-width: 50vw;
+  width: 50vw;
+  position: fixed;
+}
+
+/* ________Typo Logo________ */
 .progress_bar {
   overflow: hidden;
   background-color: #FFFFFF;
   height: auto;
-  max-height: 200px;
+  max-height: 195px;
   max-width: auto;
   width: 100%;
 }
 
 .next_button {
   background-color: #000000;
+  margin-left: 10px;
   color: #FFFFFF;
-  border: none;
+  border: 2px solid;
   border-radius: 5px;
+  border-color: #000000;
   padding: 15px 32px;
   margin-top: 24px;
   text-align: center;
@@ -159,6 +201,27 @@ h5 {
 }
 
 .next_button:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.prev_button {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid;
+  border-color: #747476;
+  border-radius: 5px;
+  padding: 15px 32px;
+  margin-top: 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.prev_button:hover {
   cursor: pointer;
   transition: 0.2s;
   text-decoration: none;
@@ -192,6 +255,13 @@ h5 {
   /* display: block; */
   position: fixed;
   height: 66px;
+}
+
+.border_box {
+  margin: 7vh;
+  border: 2px solid;
+  border-color: #747476;
+  border-radius: 5px;
 }
 
 /* ________Linke Hälfte der Navigationsbar________ */
@@ -265,6 +335,34 @@ a.active {
   text-decoration: none;
 }
 
+#progressbar {
+  background-color: #FFFFFF;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: #39A08D;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 5px;
+}
+
+#progressbar2 {
+  background-color: #FFFFFF;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar2>div {
+  background-color: #39A08D;
+  width: 100%;
+  /* Adjust with JavaScript */
+  height: 5px;
+}
+
 #container_1 {
   height: 100%;
   width: 100%;
@@ -273,6 +371,7 @@ a.active {
 
 #leftThing {
   width: 55%;
+  height: 100vh;
   background-color: #F5F6FA;
 }
 
@@ -280,4 +379,3 @@ a.active {
   width: 45%;
   background-color: #FFFFFF;
 }
-
