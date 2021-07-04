@@ -5,8 +5,8 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1" <link rel="stylesheet" href="/aboutStyle.css" /> -->
   <meta charset="utf-8">
   <title>Wiztro</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='./style/style.css')}}" />
-  <!-- <link rel="stylesheet" href="../static/style/style.css" /> -->
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='./style/style.css')}}" /> -->
+  <link rel="stylesheet" href="../static/style/style.css" />
   <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
@@ -14,8 +14,14 @@
       $('.gallery__img').on('click', function(e) {
         e.preventDefault();
         console.log('your message');
+        $('.gallery__img').attr('class', 'gallery__img');
         $(this).toggleClass('gallery__img_selected');
+
+        var source = $(this).attr("src");
+
+        $('.gallery__showcase').attr('src', source);
       });
+
     });
   </script>
 
@@ -45,7 +51,7 @@
 
   <div id="container_1">
 
-    <div id="leftThing">
+    <div id="leftThing1">
       <div class="progress">
 
         <h1>Material auswählen</h1>
@@ -62,40 +68,39 @@
         </div>
       </div>
       <div class="container">
-
         <div class="gallery">
           <figure class=”gallery__item gallery__item--1">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+            <img src="../static/img/bild_1.png" class="gallery__img" alt="Image 1">
           </figure>
           <figure class="gallery__item gallery__item--2">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
+            <img src="../static/img/bild_2.png" class="gallery__img" alt="Image 2">
           </figure>
           <figure class="gallery__item gallery__item--3">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
+            <img src="../static/img/bild_3.png" class="gallery__img" alt="Image 3">
           </figure>
           <figure class="gallery__item gallery__item--4">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
+            <img src="../static/img/bild_4.png" class="gallery__img" alt="Image 4">
           </figure>
           <figure class=”gallery__item gallery__item--1">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+            <img src="../static/img/bild_5.png" class="gallery__img" alt="Image 1">
           </figure>
           <figure class="gallery__item gallery__item--2">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
+            <img src="../static/img/bild_6.png" class="gallery__img" alt="Image 2">
           </figure>
           <figure class="gallery__item gallery__item--3">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
+            <img src="../static/img/bild_7.png" class="gallery__img" alt="Image 3">
           </figure>
           <figure class="gallery__item gallery__item--4">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
+            <img src="../static/img/bild_8.png" class="gallery__img" alt="Image 4">
           </figure>
           <figure class=”gallery__item gallery__item--1">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+            <img src="../static/img/bild_9.png" class="gallery__img" alt="Image 1">
           </figure>
         </div>
 
         <div class="button_holder_1">
           <button class="prev_button" type="button" onclick="location.href='/start.html';" onclick="">Vorheriger Schritt</button>
-          <button class="next_button" type="button" onclick="location.href='/generator_2.html';" onclick="">Nächster Schritt</button>
+          <button class="next_button" type="button" onclick="location.href='/start_2.html';" onclick="">Nächster Schritt</button>
         </div>
 
       </div>
@@ -110,7 +115,7 @@
 
         <div class="gallery_2">
           <figure class=”gallery__item gallery__item--1">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+            <img src="../static/img/bild_13.png" class="gallery__showcase" alt="Image 1">
           </figure>
         </div>
 

@@ -101,6 +101,16 @@ h5 {
   text-align: center;
 }
 
+.plattformen {
+  padding: -10px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  opacity: 100%;
+  color: #000000;
+  width: 100%;
+  text-align: center;
+}
+
 .container {
   width: 80%;
   margin: 2rem auto;
@@ -108,9 +118,13 @@ h5 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-template-rows: repeat(3, 14vw);
-  grid-gap: 16px;
+  grid-template-columns: repeat(2, 5fr);
+  grid-template-rows: repeat(0, 15vw);
+  height: calc(70vh - 10px);
+  width: calc(80vh - 10px);
+  grid-gap: 8px;
+  padding: auto;
+  margin-bottom: auto;
   margin-bottom: 160px;
 }
 
@@ -121,13 +135,24 @@ h5 {
   grid-gap: 16px;
   position: fixed;
   bottom: 25%;
-  right: 8.5%;
-  height: calc(50vh - 10px);
-  width: calc(50vh - 10px);
+  right: 6%;
+  height: calc(40vh - 10px);
+  width: calc(60vh - 10px);
   margin: auto;
+  margin-right: 1.5vh;
 }
 
 .gallery__img {
+  color: #F5F6FA;
+  border-radius: 12px;
+  border: solid;
+  border-width: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__showcase {
   color: #F5F6FA;
   border-radius: 12px;
   border: solid;
@@ -175,6 +200,19 @@ h5 {
   position: fixed;
 }
 
+.button_holder_2 {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  min-height: 100px;
+  max-height: 120px;
+  padding-left: 22%;
+  bottom: 0px;
+  left: 0px;
+  max-width: 50vw;
+  width: 50vw;
+  position: fixed;
+}
+
 /* ________Typo Logo________ */
 .progress_bar {
   overflow: hidden;
@@ -194,6 +232,19 @@ h5 {
   border-color: #000000;
   padding: 15px 32px;
   margin-top: 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.done_button {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #000000;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -250,6 +301,14 @@ h5 {
   height: 24px;
 }
 
+.platt_logo {
+  /* display: block; */
+  position: absolute;
+  margin-top: 48px;
+  margin-left: 48px;
+  height: 24px;
+}
+
 /* ________Typo Logo________ */
 .profile_logo {
   /* display: block; */
@@ -262,6 +321,53 @@ h5 {
   border: 2px solid;
   border-color: #747476;
   border-radius: 5px;
+}
+
+.platt_box {
+  /* margin: 7vh; */
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 7vh;
+  margin-right: 7vh;
+  background-color: #FFFFFF;
+  border: 2px solid;
+  border-color: #F5F6FA;
+  border-radius: 5px;
+}
+
+.platt_box:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.platt_box_selected {
+  /* margin: 7vh; */
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 7vh;
+  margin-right: 7vh;
+  background-color: #FFFFFF;
+  border: 2px solid;
+  border-color: #39A08D;
+  border-radius: 5px;
+}
+
+.platt_container {
+  margin: 7vh;
+  padding: 2vh;
+  background-color: #FFFFFF;
+}
+
+.done_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+  margin: 7vh;
+  margin: 7vh;
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
 }
 
 /* ________Linke Hälfte der Navigationsbar________ */
@@ -358,7 +464,7 @@ a.active {
 
 #progressbar2>div {
   background-color: #39A08D;
-  width: 100%;
+  width: 40%;
   /* Adjust with JavaScript */
   height: 5px;
 }
@@ -372,6 +478,18 @@ a.active {
 #leftThing {
   width: 55%;
   height: 100vh;
+  background-color: #F5F6FA;
+}
+
+#leftThing1 {
+  width: 55%;
+  height: 210vh;
+  background-color: #F5F6FA;
+}
+
+#leftThing2 {
+  width: 55%;
+  height: 115vh;
   background-color: #F5F6FA;
 }
 

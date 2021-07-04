@@ -5,16 +5,16 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1" <link rel="stylesheet" href="/aboutStyle.css" /> -->
   <meta charset="utf-8">
   <title>Wiztro</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='./style/style.css')}}" />
-  <!-- <link rel="stylesheet" href="../static/style/style.css" /> -->
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='./style/style.css')}}" /> -->
+  <link rel="stylesheet" href="../static/style/style.css" />
   <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $('.gallery__img').on('click', function(e) {
+      $('.platt_box').on('click', function(e) {
         e.preventDefault();
         console.log('your message');
-        $(this).toggleClass('gallery__img_selected');
+        $(this).toggleClass('platt_box_selected');
       });
     });
   </script>
@@ -45,11 +45,11 @@
 
   <div id="container_1">
 
-    <div id="leftThing">
+    <div id="leftThing2">
       <div class="progress">
 
-        <h1>Post hochladen </h1>
-        <h5>Fertigstellen</h5>
+        <h1>Hochladen</h1>
+        <h5>Auswählen</h5>
 
         <div id="progressbar2">
           <div></div>
@@ -58,22 +58,34 @@
       <div class="description">
         <div class="border_box">
 
+          <h4>Hier kannst du einstellen, wen du primär erreichen möchtest.<br>
+            Das kann dabei helfen, die Sichtbarkeit<br>
+            deines Gastro Unternehmens auf neue Personen Gruppen auszuweiten!<br></h4>
+        </div>
+      </div>
+      <div class="plattformen">
+        <div class="platt_container">
 
-          <h4>Glückwunsch!<br>
-            Der Einstellungsprozess ist hiermit abgeschlossen,<br>
-            fahre fort und lade deinen Post hoch!</h4>
+
+          <div class="platt_box">
+            <h4>Facebook</h4>
+          </div>
+          <div class="platt_box">
+            <h4>Instagram</h4>
+          </div>
+          <div class="platt_box">
+            <h4>Twitter</h4>
+          </div>
         </div>
       </div>
 
-      <div class="upload_button">
-        <button class="prev_button" type="button" onclick="location.href='/start.html';" onclick="">Jetzt Hochladen</button>
-      </div>
+
       <div class="container">
 
 
         <div class="button_holder_1">
-          <button class="prev_button" type="button" onclick="location.href='/start.html';" onclick="">Vorheriger Schritt</button>
-          <button class="next_button" type="button" onclick="location.href='/generator_2.html';" onclick="">Nächster Schritt</button>
+          <button class="prev_button" type="button" onclick="location.href='/start-1.html';" onclick="">Vorheriger Schritt</button>
+          <button class="next_button" type="button" onclick="location.href='/start_3.html';" onclick="">Nächster Schritt</button>
         </div>
 
 
@@ -90,7 +102,7 @@
 
         <div class="gallery_2">
           <figure class=”gallery__item gallery__item--1">
-            <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
+            <img src="../static/img/stempelkarte_oko.png" class="gallery__showcase" alt="Image 1">
           </figure>
         </div>
 
