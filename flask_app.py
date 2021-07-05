@@ -54,6 +54,24 @@ def next3():
 def next4():
     return render_template('next_4.html')
 
+@app.route('/start_1')
+def start1():
+    return render_template('start_1.html')
+
+@app.route('/start_2')
+def start2():
+    return render_template('start_2.html')
+
+@app.route('/start_3')
+def start3():
+    return render_template('start_3.html')
+
+@app.route('/start_4')
+def start4():
+    return render_template('start_4.html')
+
+
+
 
 
 
