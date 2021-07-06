@@ -103,12 +103,12 @@ def inst_pic_post(user, pwd):
     #destination = "img/hallo.jpg"
     #shutil.copyfile(source, destination)
 
-    bot.upload_photo("img/hallo.jpeg", caption="Business-OS")
+    bot.upload_photo("./hallo.jpeg", caption="Business-OS")
 
 def isnew():
     temp = serv_del()
     print(temp)
-    """
+    
     try:
         if (temp != 0): 
             print(temp)
@@ -120,9 +120,10 @@ def isnew():
             rgb_im = im.convert('RGB')
             rgb_im.save('hallo.jpeg')
             time.sleep(1)
-            uploadpic('hallo.jpeg', 'Hallo')
             #inst_pic_post('wiztro', 'RD5SyLm7kQePT4R')
             #loeschen den files
+            time.sleep(1)
+            uploadpic('hallo.jpeg', 'Hallo')
             os.remove('./hallo.png')
             os.remove('./hallo.jpeg')
             print("Sachen")
@@ -131,12 +132,16 @@ def isnew():
     except:
         print('hallo')
         time.sleep(1)
-    """
+    
 
 
 def serv_del():
     url = 'https://wiztro.pythonanywhere.com/get?name=1'
-    return cutme(requests.get(url).text)
+    temp = requests.get(url).text
+    if(temp != '0'):
+        return cutme(temp)
+    else:
+        return temp
     #return urlparse.urlparse(url)
 
 def cutme(text):
