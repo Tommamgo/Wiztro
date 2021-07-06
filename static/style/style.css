@@ -257,6 +257,12 @@ h5 {
   text-decoration: none;
 }
 
+.done_button:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
 .prev_button {
   box-sizing: border-box;
   background-color: #FFFFFF;
@@ -450,7 +456,21 @@ a.active {
 
 #progressbar>div {
   background-color: #39A08D;
-  width: 40%;
+  width: 33%;
+  /* Adjust with JavaScript */
+  height: 5px;
+}
+
+#progressbar1 {
+  background-color: #FFFFFF;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar1>div {
+  background-color: #39A08D;
+  width: 66%;
   /* Adjust with JavaScript */
   height: 5px;
 }
@@ -464,7 +484,7 @@ a.active {
 
 #progressbar2>div {
   background-color: #39A08D;
-  width: 40%;
+  width: 100%;
   /* Adjust with JavaScript */
   height: 5px;
 }

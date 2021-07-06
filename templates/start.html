@@ -3,20 +3,74 @@
 
 <head>
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1" <link rel="stylesheet" href="/aboutStyle.css" /> -->
-
   <meta charset="utf-8">
   <title>Wiztro</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='./style/style.css')}}" />
-  <!--link rel="stylesheet" href="../static/style/style.css" /> -->
+  <!-- <link rel="stylesheet" href="../static/style/style.css" /> -->
   <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {
+
+      var source = 0;
+
       $('.gallery__img').on('click', function(e) {
         e.preventDefault();
         console.log('your message');
+        $('.gallery__img').attr('class', 'gallery__img');
         $(this).toggleClass('gallery__img_selected');
+
+        source = $(this).attr("src");
+
+        $('.gallery__showcase').attr('src', source);
       });
+
+      $("#upload").click(function() {
+        $.ajax({
+          type: 'get',
+          url: 'wiztro.pythonanywhere.com/botfile?name=' + source
+          // data: 'name=' + source
+        });
+      });
+    });
+
+    $(document).ready(function() {
+      $('.platt_box').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('platt_box_selected');
+      });
+    });
+
+    $(document).ready(function() {
+
+      $(".num_2").toggle('', function() {});
+      $(".num_3").toggle('', function() {});
+
+      $("#next1").click(function() {
+        $(".num_1").toggle('', function() {});
+        $(".num_2").toggle('', function() {});
+      });
+
+      $("#back1").click(function() {
+        $(".num_2").toggle('', function() {});
+        $(".num_1").toggle('', function() {});
+      });
+
+      $("#next2").click(function() {
+        $(".num_2").toggle('', function() {});
+        $(".num_3").toggle('', function() {});
+      });
+
+      $("#back2").click(function() {
+        $(".num_3").toggle('', function() {});
+        $(".num_2").toggle('', function() {});
+      });
+
+      $("#upload").click(function() {
+        $(".num_3").toggle('', function() {});
+        $(".num_1").toggle('', function() {});
+      });
+
     });
   </script>
 
@@ -42,92 +96,178 @@
     <div class="profilenavbar">
       <img class="profile_logo" src="../static/img/Profile_Logo.png" /></img>
     </div>
-
-  </div>
-  <div class="header_start">
-    <h1>Was möchtest du veröffentlichen?</h1>
-  </div>
-  <div class="subheader">
-    <h2>Printmedien</h2>
   </div>
 
-  <div class="container">
+  <div id="container_1">
 
-    <div class="gallery">
-      <figure class=”gallery__item gallery__item--1">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--2">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
-      </figure>
-      <figure class="gallery__item gallery__item--3">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
-      </figure>
-      <figure class="gallery__item gallery__item--4">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
-      </figure>
-      <figure class=”gallery__item gallery__item--1">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--2">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
-      </figure>
-      <figure class="gallery__item gallery__item--3">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
-      </figure>
-      <figure class="gallery__item gallery__item--4">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
-      </figure>
-      <figure class=”gallery__item gallery__item--1">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
-      </figure>
+    <div id="leftThing">
+
+
+      <div class="num_1">
+
+
+
+        <div class="progress">
+
+          <h1>Material auswählen</h1>
+          <h5>Auswählen</h5>
+
+          <div id="progressbar">
+            <div></div>
+          </div>
+        </div>
+
+
+        <div class="description">
+          <div class="border_box">
+            <h4>Du willst mehr als nur ein Bild hochladen?<br>
+              Wähle hier aus, welche und wieviele Bilder du hochladen möchtest.</h4>
+          </div>
+        </div>
+        <div class="container">
+          <div class="gallery">
+            <figure class=”gallery__item gallery__item--1">
+              <img src="../static/img/bild_1.png" class="gallery__img" alt="Image 1">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+              <img src="../static/img/bild_2.png" class="gallery__img" alt="Image 2">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+              <img src="../static/img/bild_3.png" class="gallery__img" alt="Image 3">
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+              <img src="../static/img/bild_4.png" class="gallery__img" alt="Image 4">
+            </figure>
+            <figure class=”gallery__item gallery__item--1">
+              <img src="../static/img/bild_5.png" class="gallery__img" alt="Image 1">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+              <img src="../static/img/bild_6.png" class="gallery__img" alt="Image 2">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+              <img src="../static/img/bild_7.png" class="gallery__img" alt="Image 3">
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+              <img src="../static/img/bild_8.png" class="gallery__img" alt="Image 4">
+            </figure>
+            <figure class=”gallery__item gallery__item--1">
+              <img src="../static/img/bild_9.png" class="gallery__img" alt="Image 1">
+            </figure>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="button_holder_1">
+            <button class="prev_button" id="back0">Vorheriger Schritt</button>
+            <button class="next_button" id="next1">Nächster Schritt</button>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="num_2">
+
+        <div class="progress">
+
+          <h1>Hochladen</h1>
+          <h5>Auswählen</h5>
+
+          <div id="progressbar1">
+            <div></div>
+          </div>
+        </div>
+        <div class="description">
+          <div class="border_box">
+
+            <h4>Hier kannst du einstellen, wen du primär erreichen möchtest.<br>
+              Das kann dabei helfen, die Sichtbarkeit<br>
+              deines Gastro Unternehmens auf neue Personen Gruppen auszuweiten!<br></h4>
+          </div>
+        </div>
+        <div class="plattformen">
+          <div class="platt_container">
+
+
+            <div class="platt_box">
+              <h4>Facebook</h4>
+            </div>
+            <div class="platt_box">
+              <h4>Instagram</h4>
+            </div>
+            <div class="platt_box">
+              <h4>Twitter</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="button_holder_1">
+            <button class="prev_button" id="back1">Vorheriger Schritt</button>
+            <button class="next_button" id="next2">Nächster Schritt</button>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="num_3">
+
+        <div class="progress">
+          <h1>Post hochladen </h1>
+          <h5>Fertigstellen</h5>
+          <div id="progressbar2">
+            <div></div>
+          </div>
+        </div>
+
+        <div class="description">
+          <div class="border_box">
+            <h4>Glückwunsch!<br>
+              Der Einstellungsprozess ist hiermit abgeschlossen,<br>
+              fahre fort und lade deinen Post hoch!</h4>
+          </div>
+        </div>
+
+
+        <div class="done_container">
+          <button class="done_button" id="upload">Jetzt Hochladen</button>
+        </div>
+
+        <div class="container">
+          <div class="button_holder_1">
+            <button class="prev_button" id="back2">Vorheriger Schritt</button>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+    <div id=" rightThing">
+      <div class="header2">
+        <h1>Auswahl</h1>
+      </div>
+
+      <div class="container">
+
+        <div class="gallery_2">
+          <figure class=”gallery__item gallery__item--1">
+            <img src="../static/img/bild_13.png" class="gallery__showcase" alt="Image 1">
+          </figure>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
-
-  <div class="subheader">
-    <h2>Digitale Medien</h2>
-  </div>
-
-  <div class="container">
-
-    <div class="gallery">
-      <figure class=”gallery__item gallery__item--1">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--2">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
-      </figure>
-      <figure class="gallery__item gallery__item--3">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
-      </figure>
-      <figure class="gallery__item gallery__item--4">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
-      </figure>
-      <figure class=”gallery__item gallery__item--1">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--2">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 2">
-      </figure>
-      <figure class="gallery__item gallery__item--3">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 3">
-      </figure>
-      <figure class="gallery__item gallery__item--4">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 4">
-      </figure>
-      <figure class=”gallery__item gallery__item--1">
-        <img src="../static/img/stempelkarte_oko.png" class="gallery__img" alt="Image 1">
-      </figure>
-    </div>
-
-  </div>
-
-  <div class="button_holder">
-    <button class="next_button" type="button" onclick="location.href='/start_1';" onclick="">Weiter</button>
-  </div>
-
-
 
 </body>
 

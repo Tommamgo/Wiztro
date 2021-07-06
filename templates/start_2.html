@@ -5,7 +5,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1" <link rel="stylesheet" href="/aboutStyle.css" /> -->
   <meta charset="utf-8">
   <title>Wiztro</title>
-   <link rel="stylesheet" href="{{ url_for('static', filename='./style/style.css')}}" /> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='./style/style.css')}}" />
   <!-- <link rel="stylesheet" href="../static/style/style.css" /> -->
   <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
 
@@ -46,37 +46,44 @@
   <div id="container_1">
 
     <div id="leftThing2">
-      <div class="progress">
 
-        <h1>Hochladen</h1>
-        <h5>Auswählen</h5>
+      <div class="num_2">
 
-        <div id="progressbar2">
-          <div></div>
-        </div>
-      </div>
-      <div class="description">
-        <div class="border_box">
+        <div class="progress">
 
-          <h4>Hier kannst du einstellen, wen du primär erreichen möchtest.<br>
-            Das kann dabei helfen, die Sichtbarkeit<br>
-            deines Gastro Unternehmens auf neue Personen Gruppen auszuweiten!<br></h4>
-        </div>
-      </div>
-      <div class="plattformen">
-        <div class="platt_container">
+          <h1>Hochladen</h1>
+          <h5>Auswählen</h5>
 
-
-          <div class="platt_box">
-            <h4>Facebook</h4>
-          </div>
-          <div class="platt_box">
-            <h4>Instagram</h4>
-          </div>
-          <div class="platt_box">
-            <h4>Twitter</h4>
+          <div id="progressbar2">
+            <div></div>
           </div>
         </div>
+        <div class="description">
+          <div class="border_box">
+
+            <h4>Hier kannst du einstellen, wen du primär erreichen möchtest.<br>
+              Das kann dabei helfen, die Sichtbarkeit<br>
+              deines Gastro Unternehmens auf neue Personen Gruppen auszuweiten!<br></h4>
+          </div>
+        </div>
+        <div class="plattformen">
+          <div class="platt_container">
+
+
+            <div class="platt_box">
+              <h4>Facebook</h4>
+            </div>
+            <div class="platt_box">
+              <h4>Instagram</h4>
+            </div>
+            <div class="platt_box">
+              <h4>Twitter</h4>
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
 
 
@@ -85,7 +92,7 @@
 
         <div class="button_holder_1">
           <button class="prev_button" type="button" onclick="location.href='/start_1';" onclick="">Vorheriger Schritt</button>
-          <button class="next_button" type="button" onclick="location.href='/start_3';" onclick="">Nächster Schritt</button>
+          <button class="next_button" type="button" onclick="location.href='/start_3?name=bildnummer';" onclick="">Nächster Schritt</button>
         </div>
 
 
