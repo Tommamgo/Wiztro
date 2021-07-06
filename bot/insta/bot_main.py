@@ -62,7 +62,7 @@ def start_up():
     message_box.click()
 
 def uploadpic(path_img, caption):
-
+    print("1")
     #message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[2]/div[4]/div[1]/div[3]/span/div')
     #message_box.click()
     #time.sleep(2)
@@ -81,6 +81,7 @@ def uploadpic(path_img, caption):
     time.sleep(2)
     message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[3]/div[2]/div')
     message_box.click()
+    print("7")
 
     #cap =  WebDriverWait(webdriver, 20).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[10]/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div')))
     #cap.send_key(caption)
@@ -138,12 +139,14 @@ def isnew():
 def serv_del():
     url = 'https://wiztro.pythonanywhere.com/get?name=1'
     temp = requests.get(url).text
+    return temp
+    """
     if(temp != '0'):
         return cutme(temp)
     else:
         return temp
     #return urlparse.urlparse(url)
-
+    """
 def cutme(text):
     return text[3:]
 
