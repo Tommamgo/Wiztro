@@ -26,9 +26,11 @@
       });
 
       $("#upload").click(function() {
+	     //  var power = $(source).text(); 
+	     // var temp = power.substring(3);
         $.ajax({
           type: 'get',
-          url: 'wiztro.pythonanywhere.com/botfile?name=' + source
+          url: 'wiztro.pythonanywhere.com/botfile?name=' + source.substring(3)
           // data: 'name=' + source
         });
       });
