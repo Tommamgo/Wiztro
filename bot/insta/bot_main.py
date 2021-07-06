@@ -108,6 +108,7 @@ def inst_pic_post(user, pwd):
 def isnew():
     temp = serv_del()
     print(temp)
+    """
     try:
         if (temp != 0): 
             print(temp)
@@ -130,13 +131,17 @@ def isnew():
     except:
         print('hallo')
         time.sleep(1)
-
+    """
 
 
 def serv_del():
     url = 'https://wiztro.pythonanywhere.com/get?name=1'
-    return requests.get(url).text
+    return cutme(requests.get(url).text)
     #return urlparse.urlparse(url)
+
+def cutme(text):
+    return text[3:]
+
 
 
 if __name__ == "__main__":
