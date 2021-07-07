@@ -92,7 +92,6 @@ def isnew():
             if (temp != 0):
                 print(temp)
                 urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + str(temp), "hallo.png")
-                urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + str(temp), "hallo1.png")
                 print("22")
                 #um wandel von dem Bild
                 print("Start")
@@ -100,9 +99,6 @@ def isnew():
                 im = Image.open('./hallo.png')
                 rgb_im = im.convert('RGB')
                 rgb_im.save('hallo.jpeg')
-                im = Image.open('./hallo1.png')
-                rgb_im = im.convert('RGB')
-                rgb_im.save('hallo1.jpeg')
                 uploadpic('hallo.jpeg', 'Hallo')
                 #time.sleep(1)
                 #print("insta_Post")
@@ -114,6 +110,12 @@ def isnew():
                 #os.remove('./hallo.jpeg.REMOVE_ME')
                 os.remove('./hallo.jpeg')
                 print("Facebook_Post: Done")
+
+                urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + str(temp), "hallo1.png")
+
+                im = Image.open('./hallo1.png')
+                rgb_im = im.convert('RGB')
+                rgb_im.save('hallo1.jpeg')
                 #print("Instgram_Post: Done")
                 #hier kommt die post funktion
         except:
