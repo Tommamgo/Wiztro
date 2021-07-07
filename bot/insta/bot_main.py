@@ -1,14 +1,16 @@
 # coding=utf-8
-#from instabot import Bot
+from instabot import Bot
 import requests
-import urllib.parse as urlparse
-from urllib.parse import urlencode
+#import urllib.parse as urlparse
+from urlparse import urlparse
+#from urllib.parse import urlencode
 from PIL import Image
 import os
 import time
 import shutil, sys
 #https://developers.facebook.com/docs/graph-api/reference/user/picture/
-import urllib.request
+#import urllib.request
+from six.moves import urllib
 import time
 #Try chatch bolck ob es geht wenn nicht dann kann man es lasen
 #dann loeschen und dem Server bescheid geben
@@ -72,6 +74,7 @@ def uploadpic(path_img, caption):
     message_box = firefox_browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[3]/div/div[2]/div/div/div/div[2]/div[2]')
     print("2")
     message_box.click()
+    
     time.sleep(2)
     pyautogui.write(path_img)
     time.sleep(3)
@@ -98,45 +101,54 @@ def uploadpic(path_img, caption):
 
 
 def inst_pic_post(user, pwd):
+    print("12")
     bot = Bot()
     #t = time.localtime()
     #current_time = time.strftime("%H:%M:%S", t)
+    print("23")
     bot.login(username=user,
               password=pwd)
     #source = "img/test.jpg"
     #destination = "img/hallo.jpg"
     #shutil.copyfile(source, destination)
-
+    print("45")
     bot.upload_photo("./hallo.jpeg", caption="Business-OS")
 
 def isnew():
-    temp = serv_del()
-    print(temp)
-    
-    try:
-        if (temp != 0): 
-            print(temp)
-            urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + str(temp), "hallo.png")
-            #um wandel von dem Bild
-            print("hall")
-            time.sleep(2)
-            im = Image.open('./hallo.png')
-            rgb_im = im.convert('RGB')
-            rgb_im.save('hallo.jpeg')
-            time.sleep(1)
-            #inst_pic_post('wiztro', 'RD5SyLm7kQePT4R')
-            #loeschen den files
-            time.sleep(1)
-            uploadpic('hallo.jpeg', 'Hallo')
-            os.remove('./hallo.png')
-            os.remove('./hallo.jpeg')
-            print("Sachen")
-            print("nice")
-            #hier kommt die post funktion
-    except:
-        print('hallo')
-        time.sleep(1)
-    
+    bot = Bot()
+    bot.login(username='wiztro',password='RD5SyLm7kQePT4R')
+    while(True):
+
+        temp = serv_del()
+	print(temp)
+	    
+	try:
+	    if (temp != '0'): 
+	        print(temp)
+	        urllib.request.urlretrieve("https://wiztro.pythonanywhere.com/" + str(temp), "hallo.png")
+	        #um wandel von dem Bild
+	        print("Start")
+	        time.sleep(2)
+	        im = Image.open('./hallo.png')
+	        rgb_im = im.convert('RGB')
+	        rgb_im.save('hallo.jpeg')
+                uploadpic('hallo.jpeg', 'Hallo')
+	        time.sleep(1)
+	        print("insta_Post")
+	        inst_pic_post('wiztro', 'RD5SyLm7kQePT4R')
+                bot.upload_photo("./hallo.jpeg", caption="Hallo")
+	        #loeschen den files
+	        time.sleep(1)
+	        os.remove('./hallo.png')
+                os.remove('./hallo.jpeg.REMOVE_ME')
+	        os.remove('./hallo.jpeg')
+                print("Facebook_Post: Done")
+                print("Instgram_Post: Done")
+	        #hier kommt die post funktion
+	except:
+	    print('hallo')
+	    time.sleep(1)
+	    
 
 
 def serv_del():
@@ -158,7 +170,6 @@ def cutme(text):
 if __name__ == "__main__":
     #inst_pic_post("wiztro","RD5SyLm7kQePT4R" )
     start_up()
-    while(True):
-        isnew()
+    isnew()
     # Probleme mit der Lib deswegen immer den Folder wieder lowschen
     #os.remove("config")
