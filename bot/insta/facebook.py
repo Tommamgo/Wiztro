@@ -118,6 +118,7 @@ def isnew():
                 rgb_im.save('hallo1.jpeg')
                 #print("Instgram_Post: Done")
                 #hier kommt die post funktion
+                os.remove('./hallo.png')
         except:
             print('hallo')
             time.sleep(1)
